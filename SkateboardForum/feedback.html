@@ -1,0 +1,60 @@
+<!-- 
+	Tapio Koskinen 
+	ProjectWork: Skateboard forum for beginners
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+		<h1>Comment</h1>
+	</header>
+	<nav>
+			<a href="home.html">Home</a>
+			<a href="history.html">History</a>
+			<a href="equipment.html">Equipment</a>
+			<a href="tricks.html">Basics and Tricks</a>
+			<a href="feedback.html">Feedback</a>
+	</nav>
+	<main>
+	<h2>Post comments on the site!</h2>
+	<div class="info">
+      <label for="example">Enter comment
+      </label>
+      <input id="example" type="text"
+             name="Ntext" size="30">
+      <input id="sent" type="submit"  
+             value="Send"> 
+  </div>
+    <p id="para">      
+    </p>
+  </body>
+  <script>
+    window.onclick = function(e)
+    {var id =  e.target.id;   
+    	if (id === 'sent')  
+     {
+     	var dt = new Date();
+     	var txt = document.getElementById('example').value
+     	comment = txt+"\n"+dt
+     	$( "#para" ).append("<br>"+txt+"<br>"+dt+"<br>");
+     }
+    }
+  </script>
+</main>
+<footer>
+		Copyright &copy; Tapio Koskinen
+		<br>
+		<a href="mailto:tapio.koskinen@hotmail.fi">tapio.koskinen@hotmail.fi</a>
+	</footer>
+</div>
+</body>
+</html>
